@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "description": "Data service for PHinancials project",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:development": "nodemon --exec npx cross-env APP_MODE=development node src/runtime/env-appmode.js | pino-pretty"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,17 @@
   "bugs": {
     "url": "https://github.com/rkscapul/phinancials-data-service/issues"
   },
-  "homepage": "https://github.com/rkscapul/phinancials-data-service#readme"
+  "homepage": "https://github.com/rkscapul/phinancials-data-service#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1333.0",
+    "dotenv": "^16.0.3",
+    "express.js": "^1.0.0",
+    "pino": "^8.11.0",
+    "pino-pretty": "^9.4.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.21",
+    "rimraf": "^4.4.0"
+  }
 }
