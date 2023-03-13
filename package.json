@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start:development": "nodemon --exec npx cross-env APP_MODE=development node src/runtime/env-appmode.js | pino-pretty"
+    "start:development": "nodemon --exec npx cross-env DEBUG=knex:tx APP_MODE=development node src/runtime/env-appmode.js | pino-pretty"
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,11 @@
     "aws-sdk": "^2.1333.0",
     "dotenv": "^16.0.3",
     "express.js": "^1.0.0",
+    "knex": "^2.4.2",
+    "pg": "^8.10.0",
     "pino": "^8.11.0",
-    "pino-pretty": "^9.4.0"
+    "pino-pretty": "^9.4.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
